@@ -4,7 +4,7 @@ node(consts().AGENT_LABEL) {
     timestamps {
     
       cleanWorkspace()
-      buildInit()
+      buildInit() // git clone
 
       final defaultDockerFlags = "--user ${CONSTS.JENKINS_AGENT_USER_ID}:${CONSTS.JENKINS_AGENT_GROUP_ID} -v /var/run/docker.sock:/var/run/docker.sock"
       final dockerFlags = defaultDockerFlags
